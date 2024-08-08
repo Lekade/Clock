@@ -1,38 +1,57 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.intro{
+  width:100%;
+  height:100vh;
+  position:relative;
+  overflow: hidden;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.stars, .earth {
+  position: absolute;
+  will-change: transform;
+  color:transparent;
+  font-size: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.earth{
+  width:110%;
+  height:110%;
+  left:-5%;
+  right:0;
+  top:0;
+  background:url(images/cosmos1.png) center no-repeat;
+  background-size:cover;
+  z-index:1;
+  filter: drop-shadow(-27px 0 10px #fff);
+}
+
+.stars{
+  width:110%;
+  height:110%;
+  left:-5%;
+  right:0;
+  top:0;
+  background:url(images/cosmosZ.png) center no-repeat;
+  background-size:cover;
+  z-index:-1;
+}
+
+.clock{
+  width: 100%;
+  max-width:700px;
+  padding: 30px;
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(0,0,0,0.6);
+  border: 10px solid #000;
+  z-index: 2;
+}
+
+.date{
+  font-family: MOSCOW2024, sans-serif;
+  font-weight: 400;
+  font-size: 100px;
+  color: #00F797;
 }
